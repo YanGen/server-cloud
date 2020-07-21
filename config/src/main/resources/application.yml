@@ -1,0 +1,18 @@
+server:
+  port: 18002
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          # gogs
+          uri: http://121.36.11.25:12580/root/server-cloud-config.git
+          username: root
+          password: root
+#зЂВс
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:18001/eureka/
