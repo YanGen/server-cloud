@@ -1,13 +1,13 @@
-package com.muhuan.frame.common;
+package com.muhuan.frame.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CommonApplication {
+public class DemoApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CommonApplication.class, args);
+        SpringApplication.run(DemoApplication.class, args);
     }
 
 }

@@ -8,10 +8,10 @@ spring:
       server:
         git:
           # gogs
-          uri: http://121.36.11.25:12580/root/server-cloud-config.git
+          uri: http://121.36.11.25:3000/root/server-cloud-config.git
           username: root
           password: root
-#×¢²á
+#æ³¨å†Œ
 eureka:
   client:
     serviceUrl:
