@@ -8,7 +8,6 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.muhuan.frame</groupId>
     <artifactId>common</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>common</name>

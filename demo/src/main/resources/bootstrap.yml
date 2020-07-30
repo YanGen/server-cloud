@@ -8,3 +8,6 @@ spring:
       label: master
       name: config-demo,config-mysql,config-redis
 
+    nacos:
+      discovery:
+        server-addr: 121.36.11.25:8848
