@@ -2,7 +2,7 @@
 
 spring:
   application:
-    name: gateway
+    name: nacos-demo
   profiles:
     active: dev
   cloud:
@@ -14,7 +14,7 @@ spring:
         file-extension: yaml #nacos 后缀得有个a
         # 归属 namespace -> group -> ${spring-application-name}-${spring-profile-active}.${file-extension}
         group: DEV_GROUP
-        namespace: 68987530-5bd9-45c0-a886-858900e2d901
+        namespace: 68987530-5bd9-45c0-a886-858900e2d901 # namespace 的id
         ext-config:
           - data-id: mysql-dev.yaml
             group: SHARE_GROUP
@@ -28,3 +28,10 @@ spring:
           - data-id: common-config-dev.yaml
             group: SHARE_GROUP
             refresh: true
+
+
+
+#  #采用nacos 注册中心 先忽略掉eureka 注册中心
+#  autoconfigure:
+#    exclude: org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration
+

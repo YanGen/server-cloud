@@ -71,11 +71,6 @@
             <artifactId>hutool-all</artifactId>
             <version>5.3.7</version>
         </dependency>
-        <!-- Nacos -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
 
         <!-- 热部署 注意：热部署只在开发阶段使用，产品上线时必须去掉热部署-->
         <dependency>

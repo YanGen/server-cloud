@@ -1,10 +1,28 @@
 spring:
   application:
     name: demo
+  profiles:
+    active: dev
   cloud:
-    config:
-      uri: http://localhost:18002/
-      profile: dev
-      label: master
-      name: config-demo,config-mysql,config-redis
-
+    nacos:
+      discovery:
+        server-addr: 121.36.11.25:8848 # 配置nacos地址
+      config:
+        server-addr: 121.36.11.25:8848
+        file-extension: yaml #nacos 后缀得有个a
+        # 归属 namespace -> group -> ${spring-application-name}-${spring-profile-active}.${file-extension}
+        group: DEV_GROUP
+        namespace: 68987530-5bd9-45c0-a886-858900e2d901 # namespace 的id
+        ext-config:
+          - data-id: mysql-dev.yaml
+            group: SHARE_GROUP
+            refresh: true
+          - data-id: redis-dev.yaml
+            group: SHARE_GROUP
+            refresh: true
+          - data-id: rabbitmq-dev.yaml
+            group: SHARE_GROUP
+            refresh: true
+          - data-id: common-config-dev.yaml
+            group: SHARE_GROUP
+            refresh: true
