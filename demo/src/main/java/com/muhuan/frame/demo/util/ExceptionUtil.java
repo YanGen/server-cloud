@@ -11,7 +11,5 @@ import com.muhuan.frame.common.bean.ResultBean;
  * @Version 1.0.0
  **/
 public class ExceptionUtil {
-    public static ResultBean handleException(String p1,BlockException e) {
-        return ResultBean.defeated("扛不住了啊....");
-    }
+
 }
