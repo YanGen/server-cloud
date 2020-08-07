@@ -26,3 +26,6 @@ spring:
           - data-id: common-config-dev.yaml
             group: SHARE_GROUP
             refresh: true
+          - data-id: sentinel-dev.yaml
+            group: SHARE_GROUP
+            refresh: true

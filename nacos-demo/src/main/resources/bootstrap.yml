@@ -29,9 +29,15 @@ spring:
             group: SHARE_GROUP
             refresh: true
 
-
-
-#  #采用nacos 注册中心 先忽略掉eureka 注册中心
-#  autoconfigure:
-#    exclude: org.springframework.cloud.netflix.eureka.EurekaClientAutoConfiguration
-
+    sentinel:
+      transport:
+        # 指定sentinel控制台地址
+        dashboard: 121.36.11.25:8858
+        # 指定和控制台通信的IP，若不配置，会自动选择一个IP注册
+        #client-ip: 127.0.0.1
+        # 指定和控制台通信的端口哦，默认值8719
+        # 若不配置，会自动扫猫从8719开始扫猫，依次+1，知道值找到未被占用的端口
+        port: 8759
+        # 心跳发送周期，默认值null
+        # 但在SimpleHttpHeartbeatSender会用默认值10秒
+        heartbeat-interval-ms: 10000

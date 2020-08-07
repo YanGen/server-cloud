@@ -14,6 +14,8 @@
         <module>nacos-demo</module>
     </modules>
 
+<!--    子模块继承后 不用写groupid 和 version-->
+
     <groupId>com.muhuan.frame</groupId>
     <artifactId>server</artifactId>
     <version>1.0-SNAPSHOT</version>
@@ -25,12 +27,14 @@
         <relativePath/>
     </parent>
 
+<!--    定义一些版本号，类似常量constant 本身可有可无与jar包无关-->
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.1.0.RELEASE</spring-cloud-alibaba.version>
     </properties>
 
-
+    <!--dependencyManagement 顾名思义，依赖管理，只负责管控子类对象jar包的版本，但不会导入jar包，  dependencies才会导入jar  -->
     <dependencyManagement>
         <dependencies>
             <!-- spring cloud -->
@@ -45,13 +49,14 @@
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
-                <version>2.1.0.RELEASE</version>
+                <version>${spring-cloud-alibaba.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
         </dependencies>
-
     </dependencyManagement>
+
+
     <build>
         <plugins>
             <!-- 热部署相关插件 注意：热部署只在开发阶段使用，产品上线时必须去掉热部署-->
