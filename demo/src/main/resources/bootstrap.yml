@@ -4,11 +4,12 @@ spring:
   profiles:
     active: dev
   cloud:
+
     nacos:
       discovery:
-        server-addr: 121.36.11.25:8848 # 配置nacos地址
+        server-addr: localhost:8848 # 配置nacos地址
       config:
-        server-addr: 121.36.11.25:8848
+        server-addr: localhost:8848
         file-extension: yaml #nacos 后缀得有个a
         # 归属 namespace -> group -> ${spring-application-name}-${spring-profile-active}.${file-extension}
         group: DEV_GROUP
