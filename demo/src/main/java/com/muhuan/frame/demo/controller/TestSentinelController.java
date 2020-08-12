@@ -20,7 +20,7 @@ import javax.validation.constraints.Null;
  **/
 @RestController
 @RequestMapping("/hello")
-public class HelloController {
+public class TestSentinelController {
 
     @RequestMapping("/test1/{data}")
     @SentinelResource(value = "demo1")

@@ -8,9 +8,9 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>nacos-demo</artifactId>
+    <artifactId>remote</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>nacos-demo</name>
+    <name>remote</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
