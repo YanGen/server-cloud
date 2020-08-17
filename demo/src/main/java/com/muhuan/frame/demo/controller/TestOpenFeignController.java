@@ -2,6 +2,7 @@ package com.muhuan.frame.demo.controller;
 
 import com.muhuan.frame.common.bean.ResultBean;
 import com.muhuan.frame.demo.feign.RemoteService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RestController
 @RequestMapping("/feign")
+@Slf4j
 public class TestOpenFeignController {
     private final RemoteService remoteService;
 
